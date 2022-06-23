@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   font-family: sans-serif;
@@ -10,149 +11,18 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgb(147, 126, 231);
+  min-height: 100vh;
+}
+
+.panel {
+  min-height: 100vh;
+  border: 4px solid white;
+}
+
+.hidden {
+  display: none;
 }
 
 .logo {
   height: 50px;
-}
-
-header {
-  display: flex;
-  min-height: 60px;
-  background-color: coral;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-main ul li {
-  border-radius: 50%;
-  padding: 1;
-}
-
-header > button {
-  margin: 1;
-  padding: 1;
-  display: inline-block;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 50%;
-  border-radius: 4px;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-nav a {
-  font-weight: 500px;
-  margin-right: 10px;
-}
-
-nav a:hover {
-  color: dodgerblue;
-}
-
-.juega {
-  font-size: 25px;
-  font-family: Georgia;
-}
-
-.contenedor {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-.rgb2 {
-  border-color: aqua;
-  width: 200px;
-  height: 130px;
-}
-
-p {
-  text-align: center;
-}
-.contenedor > .fila0 {
-  flex: 0.3;
-  display: flex;
-}
-
-.contenedor > .fila1 {
-  flex: 0.1;
-  display: flex;
-  background-color: rgba(147, 126, 231);
-}
-
-.question {
-  font-size: 40px;
-  position: initial;
-  top: 40%;
-  width: 50%;
-}
-
-.score {
-  margin-top: 40px;
-  font-size: 24px;
-}
-
-.resultao {
-  display: none;
-  position: absolute;
-  top: 40%;
-  width: 100%;
-}
-
-.resultao span {
-  font-size: 42px;
-  font-weight: bold;
-}
-
-.resultao .close {
-  margin-top: 70px;
-}
-
-.resultao .close a {
-  color: white;
-  font-size: 21px;
-  text-decoration: none;
-  border: 5px solid white;
-  padding: 10px 15px;
-  border-radius: 5px;
-}
-
-.cuadrados {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  max-height: 35rem;
-  justify-content: center;
-  background-color: rgba(147, 126, 231);
-}
-.color {
-  font-size: 2rem;
-  line-height: 1;
-  text-align: center;
-  padding: 3rem;
-  background: rgb(11, 9, 9);
-  border: 3px solid rgb(147, 126, 231);
-  color: red;
-  margin: 6px;
-  border-radius: 50%;
-}
-
-.fila0 {
-  background: rgba(0, 0, 0, 0.3);
-}
-.fila1 {
-  background: rgba(255, 0, 0, 0.3);
-}
-
-@media (max-width: 700px) {
-  header {
-    flex-direction: column;
-  }
-  nav {
-    padding: 10px 0px;
-  }
 }

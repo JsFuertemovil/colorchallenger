@@ -8,26 +8,39 @@
     <link rel="stylesheet" href="./CSS/juego.css" />
   </head>
   <body>
-    <header class="contenedor">
-      <h1>Color Challenger</h1>
-      <p>Escoge el color correcto!</p>
-      <div id="color"></div>
-      <button id="jugar">Jugar</button>
-      <section><span id="score"></span></section>
-      <section><span id="failures"></span></section>
-      <!--
-      <nav>
-        <a href="./nosotros.html" class="nav-link">Sobre Nosotros</a>
-        <a href="./contacto.html" class="nav-link">Contacto</a>
-      </nav>
-      <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5">
-        <h2 class="Juego de Colores"></h2>
-        <img src="./img/html5.png" alt="Logo HTML 5" class="logo" />
-      </div> -->
-    </header>
-    <main>
-      <ul id="colores"></ul>
-    </main>
+    <section class="panel intro hidden" id="intro">
+      <header>
+        <h1>Color Challenger</h1>
+      </header>
+      <p>Descricin del juego...</p>
+        <button id="jugar">Jugar</button>
+    </section>
+    <section class="panel juego hidden" id="juego">
+      <header class="contenedor">
+        <p>Escoge el color correcto!</p>
+        <div id="color"></div>
+        <section><span id="score"></span></section>
+        <section><span id="failures"></span></section>
+      </header>
+      <p>
+        <ul id="colores"></ul>
+      </p>
+    </section>
+    <section class="panel final hidden" id="final">
+      <p>Panel Final</p>
+      <p id="result"></p>
+      <button>Home</button>
+    </section>  
     <script type="module" src="./JS/main.js"></script>
   </body>
-</html>
+  </html>
+  
+  <!--
+  <nav>
+    <a href="./nosotros.html" class="nav-link">Sobre Nosotros</a>
+    <a href="./contacto.html" class="nav-link">Contacto</a>
+  </nav>
+  <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5">
+    <h2 class="Juego de Colores"></h2>
+    <img src="./img/html5.png" alt="Logo HTML 5" class="logo" />
+  </div> -->
