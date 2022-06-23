@@ -1,10 +1,19 @@
 "use strict";
 
-const playButton = document.querySelector("#jugar");
-const failuresElement = document.querySelector("#failures");
-const scoreElement = document.querySelector("#score");
-const colorElement = document.querySelector("div#color");
-const coloresElement = document.querySelector("ul#colores");
+import { getRandom, getRandomRGB } from "./utility.js";
+
+const sectionIntro = document.querySelector("section#intro");
+const buttonSectionIntro = sectionIntro.querySelector("button");
+
+const sectionJuego = document.querySelector("section#juego");
+const failuresElement = sectionJuego.querySelector("#failures");
+const scoreElement = sectionJuego.querySelector("#score");
+const colorElement = sectionJuego.querySelector("div#color");
+const coloresElement = sectionJuego.querySelector("ul#colores");
+
+const sectionFinal = document.querySelector("section#final");
+const buttonSectionFinal = sectionFinal.querySelector("button");
+const pResult = sectionFinal.querySelector("p#result");
 
 const maxFailures = 3;
 const maxScore = 3;
@@ -17,15 +26,37 @@ const State = {
   failures: 0,
 };
 
-const getRandom = (max) => {
-  return Math.floor(Math.random() * (max + 1));
+const hideAllPanels = () => {
+  sectionIntro.classList.add("hidden");
+  sectionJuego.classList.add("hidden");
+  sectionFinal.classList.add("hidden");
 };
 
-const getRandomRGB = () => {
-  return `RGB(${getRandom(255)},${getRandom(255)},${getRandom(255)})`;
+const showPanel = (panel) => {
+  panel.classList.remove("hidden");
+};
+
+const final = () => {
+  hideAllPanels();
+  showPanel(sectionFinal);
+
+  //<p id="result"></p>
+  pResult.textContent = `Fallos: ${State.failures} Aciertos: ${State.score}`;
+
+  buttonSectionFinal.addEventListener("click", () => {
+    State.score = 0;
+    State.failures = 0;
+    main();
+  });
 };
 
 const play = () => {
+  hideAllPanels();
+  showPanel(sectionJuego);
+
+  // borro los li anteriores con los colores
+  coloresElement.innerHTML = "";
+
   for (let i = 0; i < numColores; i++) {
     State.colors[i] = getRandomRGB();
   }
@@ -55,8 +86,6 @@ const play = () => {
   coloresElement.append(fragmentElement);
 };
 
-playButton.addEventListener("click", play);
-
 coloresElement.addEventListener("click", (event) => {
   const target = event.target;
   if (target.matches("li")) {
@@ -64,17 +93,29 @@ coloresElement.addEventListener("click", (event) => {
       scoreElement.textContent = `Aciertos: ${++State.score}`;
       if (State.score === maxScore) {
         alert("Ganaste!!!!!");
+        final();
       } else {
         alert("Acertaste el color!");
+        play();
       }
-      play();
     } else {
       failuresElement.textContent = `Fallos: ${++State.failures}`;
       if (State.failures === maxFailures) {
         alert("Game over");
+        final();
       } else {
         alert("Color no correcto!");
       }
     }
   }
 });
+
+const main = () => {
+  hideAllPanels();
+  showPanel(sectionIntro);
+  buttonSectionIntro.addEventListener("click", () => {
+    play();
+  });
+};
+
+main();
