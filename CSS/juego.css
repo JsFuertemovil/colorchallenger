@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+*.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 html,
 body {
   font-family: sans-serif;
@@ -19,7 +26,7 @@ body {
   border: 4px solid white;
 }
 
-/*Panel de intro*/
+/*-------------------PANEL INTRO--------------------------------*/
 body>div>section {
   display: flex;
   flex-direction: column;
@@ -48,9 +55,9 @@ p {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/*Final de Intro*/
+/*-------------------------FINAL PANEL INTRO-----------------------------------*/
 
-/*boton*/
+/*-----------------------boton------------------------------*/
 button {
   width: 15rem;
   height: 5rem;
@@ -65,7 +72,7 @@ button:hover {
   color: aliceblue;
 }
 
-/*FINAL boton*/
+/*--------------------FINAL boton--------------------------*/
 
 .hidden {
   display: none;
@@ -75,17 +82,6 @@ button:hover {
   height: 50px;
 }
 
-/*MODIFICANDO SECTION JUGAR*/
-#juego {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8rem;
-  justify-content: center;
-}
-
-
-/*-----------------------MODIFICANDO SECTION JUGAR--------------------------------*/
 /*------------Modificando los li----------------------*/
 
 /*centrar lista verticalmente*/
@@ -96,7 +92,6 @@ button:hover {
   grid-gap: 50px;
   width: 200px;
   height: 200px;
-  /*alinear al centro*/
   justify-content: center;
   align-items: center;
   margin: 0 auto;
@@ -114,26 +109,34 @@ li {
 }
 
 /*header*/
-#juego>header {
+
+body>#juego>header {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   justify-content: center;
+
 }
 
-#juego>header>p {
-  font-size: 6rem;
-  font-weight: bold;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.finjuego,
+.escoger {
   background-image: linear-gradient(to right, red, violet, yellow, green, blue, white, black);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
+  font-size: 6rem;
 }
 
+span {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-
-
-/*-----------------------FIN MODIFICANDO SECTION JUGAR--------------------------------*/
+#color {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
