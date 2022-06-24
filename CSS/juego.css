@@ -19,6 +19,54 @@ body {
   border: 4px solid white;
 }
 
+/*Panel de intro*/
+body>div>section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/*este codigo de aqui arriba me esta dando por saco
+PREGUNTAR A STEFANO*/
+
+h1 {
+  font-size: 8rem;
+  font-style: italic;
+  background-image: linear-gradient(to right, red, violet, yellow, green, blue, white, black);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 1rem;
+}
+
+p {
+  font-weight: bold;
+  font-size: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Final de Intro*/
+
+/*boton*/
+button {
+  width: 15rem;
+  height: 5rem;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 35px;
+}
+
+button:hover {
+  background-color: blueviolet;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+/*FINAL boton*/
+
 .hidden {
   display: none;
 }
