@@ -21,12 +21,12 @@ body {
   padding: 0;
   background-color: rgb(147, 126, 231);
   min-height: 100vh;
-  
+
 }
 
 .panel {
   min-height: 100vh;
-  border: 4px solid white;
+  border: 4px solid rgb(226, 109, 109);
 }
 
 /*-------------------PANEL INTRO--------------------------------*/
