@@ -132,6 +132,7 @@ body>#juego>header {
   font-size: 6rem;
 }
 
+/*---------------estilo de los resultados--------------------------*/
 span {
   font-size: 2rem;
   font-weight: bold;
@@ -144,7 +145,7 @@ span {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/*colocar footer en final de la pagina */
+/*----FOOTER-------- */
 footer>p {
   position: fixed;
   bottom: 5px;
