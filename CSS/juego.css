@@ -42,6 +42,8 @@ p {
 
 /*-----------------------boton------------------------------*/
 button {
+  border-radius: 1rem;
+  border-style: none;
   width: 15rem;
   height: 5rem;
   font-size: 25px;
@@ -53,6 +55,7 @@ button:hover {
   background-color: blueviolet;
   cursor: pointer;
   color: aliceblue;
+  border: lime 10px solid;
 }
 
 /*--------------------FINAL boton--------------------------*/
@@ -89,6 +92,13 @@ li {
   color: black;
   cursor: pointer;
   list-style: none;
+}
+
+li:hover {
+  cursor: progress;
+  border: currentColor 3px;
+  height: 8rem;
+  width: 8rem;
 }
 
 /*header*/
