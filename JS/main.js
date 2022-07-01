@@ -87,27 +87,34 @@ const play = () => {
 };
 
 coloresElement.addEventListener("click", (event) => {
+  let mensaje = document.createElement("p");
   const target = event.target;
+
   if (target.matches("li")) {
     if (+target.getAttribute("data-index") === State.posWinnerColor) {
       scoreElement.textContent = `Aciertos: ${++State.score}`;
       if (State.score === maxScore) {
-        alert("Ganaste!!!!!");
+        mensaje.textContent = "Ganaste";
         final();
       } else {
-        alert("Acertaste el color!");
+        mensaje.textContent = "Acertaste el color";
         play();
       }
     } else {
       failuresElement.textContent = `Fallos: ${++State.failures}`;
       if (State.failures === maxFailures) {
-        alert("Game over");
+        mensaje.textContent = "Game over";
         final();
       } else {
-        alert("Color no correcto!");
+        mensaje.textContent = "Color no correcto";
       }
     }
   }
+  const idJuego = document.getElementById("juego");
+  idJuego.append(mensaje);
+  setTimeout(() => {
+    mensaje.remove();
+  }, 1000);
 });
 
 const main = () => {
