@@ -114,7 +114,7 @@ coloresElement.addEventListener("click", (event) => {
   idJuego.append(mensaje);
   setTimeout(() => {
     mensaje.remove();
-  }, 1000);
+  }, 2000);
 });
 
 const main = () => {
