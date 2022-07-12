@@ -134,12 +134,3 @@ span {
   font-weight: bold;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-/*----FOOTER-------- */
-footer>p {
-  position: fixed;
-  bottom: 5px;
-  left: 5px;
-  font-size: 20px;
-  color: aliceblue;
-}

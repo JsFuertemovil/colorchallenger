@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Juego de Colores</title>
-    <link rel="stylesheet" href="./CSS/juego.css" />
-  </head>
-  <body>
-    
-    <section class="panel intro hidden" id="intro">
-      <header>
-        <h1>Color Challenger</h1>
-      </header>
-      <p>¿Cuánto sabes de colores RGB? Ponte a prueba con éste juego</p>
-        <button id="jugar">Jugar</button>
-    </section>
-  
-    <section class="panel juego hidden" id="juego">
-      <header class="contenedor">
-        <p class="escoger">Escoge el color correcto!</p>
-        <div id="color"></div>
-        <section><span id="score"></span></section>
-        <section><span id="failures"></span></section>
-      </header>
-      <p>
-        <ul id="colores"></ul>
-      </p>
-    </section>
-  
-    
-    <section class="panel final hidden" id="final">
-      <p class="finjuego">Has terminado el juego</p>
-      <p id="result"></p>
-      <button>Home</button>
-      <footer>
-        <p>Alejandro & Alejandro para Hack a Boss</p>
-      </footer>
-    </section>
-    
-  
-    <script type="module" src="./JS/main.js"></script>
-  </body>
-  </html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
+  <title>Juego de Colores</title>
+  <link rel="stylesheet" href="./CSS/juego.css" />
+</head>
+
+<body>
+
+  <section class="panel intro hidden" id="intro">
+    <header>
+      <h1>Color Challenger</h1>
+    </header>
+    <p>¿Cuánto sabes de colores RGB? Ponte a prueba con éste juego</p>
+    <button id="jugar">Jugar</button>
+  </section>
+
+  <section class="panel juego hidden" id="juego">
+    <header class="contenedor">
+      <p class="escoger">Escoge el color correcto!</p>
+      <div id="color"></div>
+      <section><span id="score"></span></section>
+      <section><span id="failures"></span></section>
+    </header>
+    <p>
+    <ul id="colores"></ul>
+    </p>
+  </section>
+
+
+  <section class="panel final hidden" id="final">
+    <p class="finjuego">Has terminado el juego</p>
+    <p id="result"></p>
+    <button>Home</button>
+  </section>
+
+
+  <script type="module" src="./JS/main.js"></script>
+</body>
+
+</html>
